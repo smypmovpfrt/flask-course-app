@@ -1,0 +1,147 @@
+/* Сброс стандартных стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Стили для заголовка */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Стили навигационного меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Основные стили для содержимого */
+main {
+    padding: 20px;
+}
+
+article {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1024px; /* Ограничение ширины контейнера */
+    margin: 0 auto;   /* Центрирование контейнера */
+}
+
+/* Стили для секций */
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #35424a;
+    margin-bottom: 10px;
+}
+
+/* Стили для изображений */
+img {
+    border-radius: 5px;
+    max-width: 100%;  /* Изображение не превысит ширину родительского контейнера */
+    height: auto;     /* Высота автоматически подстраивается для сохранения пропорций */
+}
+
+/* Стили для подвала */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+
+.horizontal-container {
+    display: flex;                 /* Используем Flexbox для горизонтального выравнивания */
+    justify-content: space-between; /* Пропорциональное распределение пространства между элементами */
+    align-items: center;          /* Центрирование элементов по вертикали */
+    padding: 10px;               /* Внутренние отступы для контейнера */
+    background-color: #eaeaea;   /* Цвет фона контейнера */
+    border: 1px solid #ccc;       /* Рамка контейнера */
+    border-radius: 5px;          /* Закругленные углы */
+}
+
+.inner-box {
+    flex: 1;                     /* Каждый элемент занимает равное пространство */
+    margin: 0 10px;             /* Горизонтальные отступы между элементами */
+    padding: 20px;              /* Внутренние отступы для элементов */
+    background-color: #ffffff;  /* Цвет фона для внутренних элементов */
+    border: 1px solid #ddd;      /* Рамка для внутренних элементов */
+    border-radius: 5px;         /* Закругленные углы */
+    text-align: center;          /* Центрирование текста */
+}

@@ -1,81 +1,55 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% extends 'base.html' %}
 
-    <meta property="og:title" content="Заголовок страницы в OG">
-    <meta property="og:description" content="Описание страницы в OG">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <meta property="og:url" content="https://example.com/">
-  </head>
-  <body>
-    <header>
-      <h1>ВСЕМИРНЫЙ ПРЕОБРАЗОВАТЕЛЬ ФОРМАТОВ</h1>
-      <h2>И ещё можно укоротить ссылку</h2>
-      <h6>Какой полезный сайт!</h6>
-      <nav>
-        <ul>
-          <li><a href="index.html">Эта страница</a></li>
-          <li><a href="catalog.html">Другая страница</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <section>
-           <center> 
-          <h2>Преобразовать формат? Тут такое возможно!!!</h2> 
-            <div class="container">
-                <form>
-                    <button type="selectPic">Выберите файл 😬😬😬</button>
-                    <label for="input-format">Входной формат:</label>
-                    <select id="input-format" name="input-format">
-                        <option value="jpg">JPG</option>
-                        <option value="pgn">PGN</option>
-                        <option value="doc">BMP</option>
-                        <option value="doc">WEBM</option>
-                        <!-- Добавьте другие форматы по мере необходимости -->
-                    </select>
-        
-                    <label for="output-format">Выходной формат:</label>
-                    <select id="output-format" name="output-format">
-                        <option value="jpg">JPG</option>
-                        <option value="pgn">PGN</option>
-                        <option value="doc">BMP</option>
-                        <option value="doc">WEBM</option>
-                    </select>
-                    <button type="submit">🙄🙄🙄Преобразовать</button>
-                    
-                </form>
-            </div>
-        </center>
-          <div class="horizontal-container">
-            <div class="inner-box">
-                <img class="mainPage" src="{{ url_for('static', filename='images/walkingman.jpg') }}" alt="Человек и пароход">
-            </div>
-            <div class="inner-box">
-                <h1>Преобразование файлов онлайн</h1>
-                <p>
-                    Наш сайт предлагает непревзойденное удобство преобразования файлов онлайн – просто загрузите свой документ, выберите нужный формат, и наше мощное программное обеспечение выполнит всю работу за вас!
-                </p>
-            </div>
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+{% block shapka %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<article>
+    <section>
+       <center> 
+      <h2>Преобразовать формат? Тут такое возможно!!!</h2> 
+    </center>
+      <div class="horizontal-container">
+        <div class="inner-box">
+            <form>
+                <input type="selectPic" value="Выберите файл 😬😬😬" />
+                <label for="input-format">Входной формат:</label>
+                <select id="input-format" name="input-format">
+                    <option value="jpg">JPG</option>
+                    <option value="pgn">PGN</option>
+                    <option value="doc">BMP</option>
+                    <option value="doc">WEBM</option>
+                    <!-- Добавьте другие форматы по мере необходимости -->
+                </select>
+    
+                <label for="output-format">Выходной формат:</label>
+                <select id="output-format" name="output-format">
+                    <option value="jpg">JPG</option>
+                    <option value="pgn">PGN</option>
+                    <option value="doc">BMP</option>
+                    <option value="doc">WEBM</option>
+                </select>
+                <input type="submit" value="🙄🙄🙄Преобразовать"/>
+                
+            </form>
         </div>
-        </section>
-        <section>
-          
-        </section>
-        <section>
-          <h2>И третья</h2>
-          <p>Вы уже должны были начать догадываться.</p>
-        </section>
-      </article>
-    </main>
-    <footer>
-      <p>Сюда бы я вписал информацию об авторе и ссылки на другие сайты</p>
-    </footer>
-    <!-- сюда можно подключить jquery <script src="scripts/app.js" defer></script> -->
-  </body>
-</html>
+        <div class="inner-box">
+            <h1>Преобразование файлов онлайн</h1>
+            <p>
+                Наш сайт предлагает непревзойденное удобство преобразования файлов онлайн – просто загрузите свой документ, выберите нужный формат, и наше мощное программное обеспечение выполнит всю работу за вас!
+            </p>
+        </div>
+    </div>
+    </section>
+  </article>
+  {% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}

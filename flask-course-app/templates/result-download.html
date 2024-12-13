@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+{% block shapka %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<article>
+    <section>
+       <center> 
+      <h2>Преобразовать формат? Тут такое возможно!!!</h2> 
+    </center>
+      <div class="horizontal-container">
+        <div class="inner-box">
+            <form action="/get-img" method="get" class="get-file" enctype="multipart/form-data">
+                <!-- Скрытое поле для передачи пути к файлу -->
+                <input type="hidden" name="filePath" value="{{ filePath }}">
+                <input type="submit" value="🙄🙄🙄Скачать картинку"/>
+            </form> 
+        </div>
+        <div class="inner-box">
+            <h1>Готово !!!</h1>
+            <p>
+                <img src="{{ url_for('static', filename='images/me.png') }}" alt="Ето я"/>
+            </p>  
+        </div>  
+      </div>
+    </section>
+  </article>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}

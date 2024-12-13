@@ -17,26 +17,24 @@
     </center>
       <div class="horizontal-container">
         <div class="inner-box">
-            <form>
-                <input type="selectPic" value="Выберите файл 😬😬😬" />
+            <form action="/change-format" method="post" class="change-format" enctype="multipart/form-data">
+                <input type="file" class="changeInput" name="file" accept=".jpg, .png, .bmp, .webm" required/>
                 <label for="input-format">Входной формат:</label>
                 <select id="input-format" name="input-format">
-                    <option value="jpg">JPG</option>
-                    <option value="pgn">PGN</option>
-                    <option value="doc">BMP</option>
-                    <option value="doc">WEBM</option>
-                    <!-- Добавьте другие форматы по мере необходимости -->
+                    <option value="JPG">JPG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="BMP">BMP</option>
+                    <option value="WEBM">WEBM</option>
                 </select>
     
                 <label for="output-format">Выходной формат:</label>
                 <select id="output-format" name="output-format">
-                    <option value="jpg">JPG</option>
-                    <option value="pgn">PGN</option>
-                    <option value="doc">BMP</option>
-                    <option value="doc">WEBM</option>
+                    <option value="JPG">JPG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="BMP">BMP</option>
+                    <option value="WEBM">WEBM</option>
                 </select>
                 <input type="submit" value="🙄🙄🙄Преобразовать"/>
-                
             </form>
         </div>
         <div class="inner-box">
